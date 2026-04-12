@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Reset Password | Portal</title>
+    <title>Student Registration | Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,22 +14,32 @@
     <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <i class="fas fa-unlock-alt logo-icon"></i>
-                <h1>Reset Password</h1>
-                <p>Enter your email address and we'll send you a link to reset your password.</p>
+                <i class="fas fa-user-plus logo-icon"></i>
+                <h1>Create Account</h1>
+                <p>Join the student portal to access your dashboard.</p>
             </div>
 
-            <form onsubmit="resetform(event)">
+            <form onsubmit="signupform(event)">
                 <div class="input-group">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" id="username" required placeholder="Registered Email">
+                    <input type="text" id="username" required placeholder="Email Address">
                 </div>
 
-                <button type="submit" class="login-btn">Send Reset Link</button>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" required placeholder="Create Password">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-check-double"></i>
+                    <input type="password" id="samepassword" required placeholder="Confirm Password">
+                </div>
+
+                <button type="submit" class="login-btn">Register Student</button>
 
                 <div class="form-footer">
                     <div class="signup-prompt">
-                        Remembered your password? <a href="login.html">Back to Login</a>
+                        Already have an account? <a href="login.html">Login here</a>
                     </div>
                 </div>
 
