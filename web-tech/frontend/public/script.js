@@ -20,64 +20,32 @@ function generatecaptcha() {
 }
 
 async function loginform(e) {
-
-
-
     e.preventDefault();
-
-
-
     let email = document.getElementById('username').value;
-
-
-
     let password = document.getElementById('password').value;
-
-
 
     let captcha = document.getElementById('captchavalue').value;
 
-
-
     const result = document.getElementById("result");
-
-
-
     if (!email || !password) {
-
-
-
-        console.log("user and password are required");
-
+        result.style.color = "#e11d48";
+        result.innerText = "Email and password are required";
         return;
-
-
-
     }
 
+    if (captcha !== orginalcaptcha) {
+        result.style.color = "#e11d48";
+        result.innerText = "Invalid Captcha!";
+        generatecaptcha();
+        return;
+    }
 
-
-    /* if (captcha !== orginalcaptcha) {
-
-
-
-    console.log("Invalid captcha" + " : " + captcha + " : " + orginalcaptcha);
-
-    return;
-
-
-
-    }*/
-
-
+    result.style.color = "var(--nav-light-blue)";
+    result.innerText = "Authenticating...";
 
     const response = await fetch('/api/login', {
 
-
-
         method: "POST",
-
-
 
         headers: {
 
@@ -95,34 +63,20 @@ async function loginform(e) {
 
     });
 
-
-
-    if (!response.ok) {
-
-        result.style.color = "red";
-
-        result.innerText = data.message;
-
-        generatecaptcha();
-
-        return;
-
-    }
-
     const data = await response.json();
 
+    if (!response.ok) {
+        result.style.color = "#e11d48";
+        result.innerText = data.message || "Login failed";
+        if (typeof generatecaptcha === "function") generatecaptcha();
+        return;
+    }
+
+
     console.log(data);
-
-
-
     localStorage.setItem("token", data.token);
 
     localStorage.setItem("username", data.username);
-
-
-
-
-
     const dashboard = await fetch("/api/auth/dashboard", {
 
         headers: {
@@ -132,20 +86,13 @@ async function loginform(e) {
         }
 
     })
-
-
-
     const html = await dashboard.text();
-
-
 
     document.open();
 
     document.write(html);
 
     document.close();
-
-
 
 }
 
