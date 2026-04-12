@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 100%; max-width: 500px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 30px; border-top: 5px solid var(--nav-blue);">
+
+            <h3 style="margin-top: 0; color: #333; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-key" style="color: var(--nav-light-blue);"></i> Change Password
+            </h3>
+
+            <form id="passwordForm" style="display: flex; flex-direction: column; gap: 20px;">
+
+                <div>
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 8px;">Current Password</label>
+                    <input type="password" placeholder="Enter current password" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--nav-light-blue)'"
+                        onblur="this.style.borderColor='#cbd5e1'">
+                </div>
+
+                <hr style="margin: 5px 0; border-top: 1px solid #f1f5f9;">
+
+                <div>
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 8px;">New Password</label>
+                    <input type="password" placeholder="Min. 8 characters" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none;" onfocus="this.style.borderColor='var(--nav-light-blue)'" onblur="this.style.borderColor='#cbd5e1'">
+                </div>
+
+                <div>
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 8px;">Confirm New Password</label>
+                    <input type="password" placeholder="Re-type new password" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none;" onfocus="this.style.borderColor='var(--nav-light-blue)'" onblur="this.style.borderColor='#cbd5e1'">
+                </div>
+
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                    <div style="font-size: 0.75rem; color: #64748b; font-weight: bold; text-transform: uppercase; margin-bottom: 8px;">Requirements:</div>
+                    <ul style="margin: 0; padding-left: 18px; font-size: 0.8rem; color: #475569; line-height: 1.6;">
+                        <li>At least 8 characters long</li>
+                        <li>Must include a number or symbol</li>
+                        <li>Cannot be the same as old password</li>
+                    </ul>
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-top: 10px;">
+                    <button type="submit" style="flex: 2; background: var(--nav-blue); color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#003d80'" onmouseout="this.style.background='var(--nav-blue)'">
+                        Update Password
+                    </button>
+                    <button type="button" style="flex: 1; background: #f1f5f9; color: #475569; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">
+                        Cancel
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

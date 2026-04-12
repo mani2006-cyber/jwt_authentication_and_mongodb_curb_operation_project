@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT-AP VTOP Clone</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/dashboard/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="fas fa-bars menu-toggle" id="toggleBtn"></i>
+            <span class="logo-text">VIT-AP UNIVERSITY</span>
+        </div>
+        <div class="nav-right">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-print"></i>
+            <i class="fas fa-star"></i>
+            <div class="user-info" style="display: flex; justify-content: center; flex-direction: row; align-items: center; gap: 3px;" onclick="this.querySelector('.user-dropdown').classList.toggle('show')" style="position: relative; cursor: pointer;">
+                <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; gap: 3px;"><span>23BCE9984</span>
+                    <h5 id="username"></h5>
+                </div>
+
+                <i class="fas fa-caret-down"></i>
+
+                <div class="user-dropdown">
+                    <a onclick="logout()" class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+
+            <div class="menu-item" id="about" onclick="operation('about')"><i class="fas fa-info-circle"></i><span class="menu-text">About</span></div>
+            <div class="menu-item" id="contact" onclick="operation('contact')"><i class="fas fa-phone"></i><span class="menu-text">Contact Us</span></div>
+            <div class="menu-item" id="student_life" onclick="operation('student_life')"><i class="fas fa-paw"></i><span class="menu-text">Student Life</span></div>
+            <div class="menu-item" id="Academics" onclick="operation('Academics')"><i class="fas fa-book"></i><span class="menu-text">Academics</span></div>
+            <div class="menu-item" id="grades" onclick="operation('grades')"><i class="fas fa-book"></i><span class="menu-text">grades</span></div>
+
+            <div class="menu-item" id="Examinations" onclick="operation('Examinations')"><i class="fas fa-graduation-cap"></i><span class="menu-text">Examinations</span></div>
+            <div class="menu-item" id="Hostel" onclick="operation('Hostel')"><i class="fas fa-university"></i><span class="menu-text">Hostel</span></div>
+            <div class="menu-item" id="Finance" onclick="operation('Finance')"><i class="fas fa-file-alt"></i><span class="menu-text">Finance</span></div>
+
+            <div class="menu-item" id="updatepass" onclick="operation('updatepass')"><i class="fa-solid fa-key"></i><span class="menu-text">change password</span></div>
+
+        </div>
+
+
+        <div class="data">
+
+            <div class="detailes">
+
+                <h1> select the user options in left sidebar </h1>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script src="/dashboard/script.js"></script>
+
+
+</body>
+
+</html>
