@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Student Login | Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="generatecaptcha()">
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-user-graduate logo-icon"></i>
+                <h1>Student Login</h1>
+                <p>Welcome back! Please enter your details.</p>
+            </div>
+
+            <form onsubmit="loginform(event)">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="username" required placeholder="Email or Username" value="mani">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" required placeholder="Password" value="12345">
+                </div>
+
+                <div class="captcha-wrapper">
+                    <div class="captcha-box">
+                        <span id="captcha">1234</span>
+                        <button type="button" onclick="generatecaptcha()" class="refresh-btn">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </button>
+                    </div>
+                    <div class="input-group captcha-input">
+                        <i class="fas fa-shield-alt"></i>
+                        <input type="text" id="captchavalue" required placeholder="Enter Captcha">
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn">Login to Dashboard</button>
+
+                <div class="form-footer">
+                    <a href="forgotpassword.html">Forgot Password?</a>
+                    <div class="signup-prompt">
+                        Don't have an account? <a href="signup.html">Sign Up</a>
+                    </div>
+                </div>
+
+                <h3 id="result"></h3>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

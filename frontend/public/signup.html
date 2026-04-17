@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Student Registration | Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-user-plus logo-icon"></i>
+                <h1>Create Account</h1>
+                <p>Join the student portal to access your dashboard.</p>
+            </div>
+
+            <form onsubmit="signupform(event)">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="username" required placeholder="Email Address">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" required placeholder="Create Password">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-check-double"></i>
+                    <input type="password" id="samepassword" required placeholder="Confirm Password">
+                </div>
+
+                <button type="submit" class="login-btn">Register Student</button>
+
+                <div class="form-footer">
+                    <div class="signup-prompt">
+                        Already have an account? <a href="login.html">Login here</a>
+                    </div>
+                </div>
+
+                <h3 id="result" style="text-align: center; font-size: 0.9rem; margin-top: 15px;"></h3>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
