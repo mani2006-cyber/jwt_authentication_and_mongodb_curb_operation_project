@@ -59,7 +59,7 @@ Example document:
 }
 
 
-Database Name: student_information
+🗄️ Database Name: student_information
 Collection: students
 
 Example document:
