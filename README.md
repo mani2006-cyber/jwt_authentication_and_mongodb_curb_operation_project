@@ -1,3 +1,4 @@
+
 Student Portal & Security Dashboard
 Project Overview
 A secure, full-stack web application designed for student management and vulnerability analysis. This portal integrates a modern frontend with a robust Node.js backend, featuring a secure authentication system that protects sensitive student data.
